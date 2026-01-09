@@ -1,4 +1,4 @@
-Step-by-Step Setup: React + FastAPI
+Step-by-Step Setup: React + FastAPI (Basic FastApi work flow)
 1. Create a React Project
 
 Create your React project using your preferred method (Vite or Create React App).
