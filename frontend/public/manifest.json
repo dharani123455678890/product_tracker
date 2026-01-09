@@ -1,0 +1,8 @@
+{
+	"short_name": "MD Store",
+	"name": "MD Store Inventory",
+	"start_url": ".",
+	"display": "standalone",
+	"theme_color": "#764ba2",
+	"background_color": "#ffffff"
+}

@@ -1,0 +1,64 @@
+Step-by-Step Setup: React + FastAPI
+1. Create a React Project
+
+Create your React project using your preferred method (Vite or Create React App).
+
+2. Create a Virtual Environment (venv)
+
+Run the following command inside your backend project directory:
+
+python -m venv env_name
+
+3. Activate the Virtual Environment
+
+Navigate to the Scripts folder and activate the virtual environment:
+
+env_name\Scripts\Activate.ps1
+
+
+After activation, the terminal prompt will show the environment name, for example:
+
+(env_name) PS C:\Users\thani\OneDrive\Documents\own_project\practice\fastapi-demo-products-with-ui>
+
+4. Deactivate the Virtual Environment
+
+To deactivate the virtual environment, run:
+
+deactivate
+
+5. Install FastAPI and Uvicorn
+
+While the virtual environment is active, install FastAPI and Uvicorn:
+
+pip install fastapi uvicorn
+
+6. Create the FastAPI Server File
+
+Create a Python file for your FastAPI server (for example, main.py).
+
+Import FastAPI:
+
+from fastapi import FastAPI
+
+
+Create the FastAPI application object:
+
+app = FastAPI()
+
+7. Create an Endpoint to Return a Web Response
+
+Define an endpoint to handle requests to the root URL (/):
+
+@app.get("/")
+def greet():
+    return "Welcome"
+
+
+Here, app refers to the FastAPI application object created earlier.
+FastAPI uses this object to register endpoints and handle incoming requests.
+
+Result
+
+When you run the FastAPI server and open the browser at /, the following response will be displayed:
+
+Welcome

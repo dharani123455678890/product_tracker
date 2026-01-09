@@ -1,0 +1,211 @@
+/* ===== BASE ===== */
+* {
+  box-sizing: border-box;
+  font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f6f7fb;
+  color: #1f2937;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+/* ===== HEADER ===== */
+.store-header {
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 18px 24px;
+}
+
+.store-header h1 {
+  margin: 0;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  color: #111827;
+}
+
+/* ===== SEARCH BAR ===== */
+.search-bar {
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 14px 24px;
+}
+
+.search-bar input {
+  width: 100%;
+  max-width: 520px;
+  padding: 10px 14px;
+  font-size: 14px;
+  background: #f9fafb;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+}
+
+.search-bar input:focus {
+  outline: none;
+  background: #ffffff;
+  border-color: #2563eb;
+}
+
+/* ===== MAIN LAYOUT ===== */
+.main-layout {
+  display: grid;
+  grid-template-columns: 3.5fr 1.4fr;
+  gap: 24px;
+  padding: 24px;
+  align-items: flex-start;
+}
+
+/* ===== PRODUCT LIST ===== */
+.list-section {
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  padding: 18px;
+}
+
+.list-section h2 {
+  margin: 0 0 16px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.list-section table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.list-section th {
+  background: #f9fafb;
+  font-size: 12.5px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #6b7280;
+  padding: 12px 10px;
+  border-bottom: 1px solid #e5e7eb;
+  cursor: pointer;
+}
+
+.list-section td {
+  padding: 14px 10px;
+  font-size: 14px;
+  border-bottom: 1px solid #eef2f7;
+  color: #374151;
+}
+
+.list-section tr:hover {
+  background: #f9fafb;
+}
+
+/* ===== ACTION BUTTONS ===== */
+.list-section td button {
+  font-size: 13px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  margin-right: 6px;
+  background: #f3f4f6;
+  color: #111827;
+}
+
+.list-section td button:hover {
+  background: #e5e7eb;
+}
+
+.list-section td button:last-child {
+  color: #dc2626;
+}
+
+.list-section td button:last-child:hover {
+  background: #fee2e2;
+}
+
+/* ===== FORM SECTION ===== */
+.form-section {
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  padding: 18px;
+  position: sticky;
+  top: 24px;
+}
+
+.form-section h2 {
+  margin: 0 0 16px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.form-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-section input {
+  padding: 10px 12px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  background: #f9fafb;
+}
+
+.form-section input:focus {
+  outline: none;
+  background: #ffffff;
+  border-color: #2563eb;
+}
+
+/* ===== PRIMARY BUTTON ===== */
+.form-section button[type="submit"] {
+  margin-top: 8px;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  background: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.form-section button[type="submit"]:hover {
+  background: #1e40af;
+}
+
+/* ===== SECONDARY BUTTON ===== */
+.form-section button[type="button"] {
+  margin-top: 6px;
+  padding: 10px;
+  font-size: 14px;
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.form-section button[type="button"]:hover {
+  background: #e5e7eb;
+}
+
+/* ===== MESSAGES ===== */
+.success {
+  margin-top: 12px;
+  font-size: 13px;
+  color: #059669;
+}
+
+.error {
+  margin-top: 12px;
+  font-size: 13px;
+  color: #dc2626;
+}
