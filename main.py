@@ -48,12 +48,12 @@ init_db()
 def greet():
     return {"message": "Welcome"}
 
-# ✅ GET ALL
+
 @app.get("/products")
 def get_products(db: Session = Depends(get_db)):
     return db.query(database_model.product).all()
 
-# ✅ GET ONE
+
 @app.get("/products/{id}")
 def get_product(id: int, db: Session = Depends(get_db)):
     product_db = db.query(database_model.product).filter_by(id=id).first()
@@ -61,7 +61,7 @@ def get_product(id: int, db: Session = Depends(get_db)):
         raise HTTPException(status_code=404, detail="Product not found")
     return product_db
 
-# ✅ CREATE
+
 @app.post("/products")
 def add_product(p: product, db: Session = Depends(get_db)):
     if db.query(database_model.product).filter_by(id=p.id).first():
@@ -71,7 +71,7 @@ def add_product(p: product, db: Session = Depends(get_db)):
     db.commit()
     return {"message": "Product added"}
 
-# ✅ UPDATE
+
 @app.put("/products/{id}")
 def update_product(id: int, p: product, db: Session = Depends(get_db)):
     db_product = db.query(database_model.product).filter_by(id=id).first()
@@ -85,7 +85,7 @@ def update_product(id: int, p: product, db: Session = Depends(get_db)):
     db.commit()
     return {"message": "Product updated"}
 
-# ✅ DELETE
+
 @app.delete("/products/{id}")
 def delete_product(id: int, db: Session = Depends(get_db)):
     db_product = db.query(database_model.product).filter_by(id=id).first()
